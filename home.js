@@ -14,7 +14,7 @@ const SUBJECTS = [
     tag: '20 actividades',
     title: 'Actividades de Matemática',
     desc: 'Fracciones y decimales: arrastrá, coloreá y ubicá en la recta numérica.',
-    href: 'matematica/index.html',
+    href: 'fracciones-decimales6/index.html',
     available: true,
   },
   {
