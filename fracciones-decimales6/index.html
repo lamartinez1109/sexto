@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuaderno de Fracciones y Decimales — 6° grado</title>
+<meta name="description" content="App interactiva para practicar fracciones y decimales: arrastrar, colorear, ubicar en la recta numérica y más.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="paper-texture" aria-hidden="true"></div>
+
+<header class="notebook-header">
+  <div class="header-inner">
+    <div class="title-block">
+      <p class="eyebrow">6° grado · Matemática</p>
+      <h1>Cuaderno de <span class="hl-fraction">Fracciones</span> &amp; <span class="hl-decimal">Decimales</span></h1>
+      <p class="subtitle">Arrastrá, coloreá y ubicá en la recta para dominar 20 actividades.</p>
+    </div>
+    <div class="progress-widget" id="progress-widget" aria-live="polite">
+      <svg class="progress-ring" width="86" height="86" viewBox="0 0 86 86">
+        <circle class="ring-bg" cx="43" cy="43" r="37"></circle>
+        <circle class="ring-fill" id="ring-fill" cx="43" cy="43" r="37"></circle>
+      </svg>
+      <div class="progress-label">
+        <span id="progress-count">0</span><span class="progress-total">/20</span>
+        <span class="progress-star">★</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Secciones">
+  <button class="tape-tab tape-fraction is-active" role="tab" aria-selected="true" data-section="fractions" id="tab-fractions">
+    <span class="tape-icon">🍕</span> Fracciones
+  </button>
+  <button class="tape-tab tape-decimal" role="tab" aria-selected="false" data-section="decimals" id="tab-decimals">
+    <span class="tape-icon">🔢</span> Decimales
+  </button>
+</nav>
+
+<main>
+  <section id="board" class="board" aria-live="polite"></section>
+
+  <section id="activity-panel" class="activity-panel" hidden>
+    <div class="panel-card">
+      <button id="btn-back" class="btn-back" type="button">← Volver al cuaderno</button>
+
+      <div class="panel-head">
+        <span class="panel-index" id="panel-index">Actividad 1</span>
+        <h2 id="panel-title">Título</h2>
+        <p id="panel-instruction" class="panel-instruction">Instrucción</p>
+      </div>
+
+      <div class="item-dots" id="item-dots"></div>
+
+      <div class="item-container" id="item-container"></div>
+
+      <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+
+      <div class="panel-actions">
+        <button id="btn-check" class="btn btn-primary" type="button">Verificar</button>
+        <button id="btn-retry" class="btn btn-ghost" type="button" hidden>Intentar de nuevo</button>
+        <button id="btn-next" class="btn btn-success" type="button" hidden>Siguiente →</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="celebration" class="celebration" aria-hidden="true"></div>
+
+<footer class="site-footer">
+  <p>Hecho para practicar fracciones y decimales — 20 actividades, sin conexión a internet necesaria (salvo tipografías).</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
