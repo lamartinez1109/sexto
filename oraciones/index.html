@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aventureros de la Lengua · Oraciones bimembres y unimembres</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="hud" hidden>
+  <button id="h-home" class="btn small" title="Ir al mapa">🗺️ Mapa</button>
+  <span id="h-name"></span>
+  <span class="chip">⭐ <b id="h-stars">0</b></span>
+  <span class="chip">🏆 <b id="h-pts">0</b></span>
+</header>
+
+<main>
+  <section id="s-welcome" class="screen active">
+    <div class="hero">📚✨</div>
+    <h1>Aventureros de la Lengua</h1>
+    <p class="sub">Viajá por 6 niveles y convertite en <b>Maestro de las oraciones</b>: bimembres y unimembres.</p>
+    <label for="in-name">¿Cómo te llamás?</label>
+    <input id="in-name" maxlength="20" placeholder="Tu nombre" autocomplete="off">
+    <button id="b-start" class="btn big">¡Empezar la aventura!</button>
+    <button id="b-reset" class="btn link" hidden>Borrar mi progreso</button>
+  </section>
+
+  <section id="s-map" class="screen">
+    <h2>Mapa de niveles</h2>
+    <p class="sub">Conseguí al menos ⭐ en un nivel para desbloquear el siguiente.</p>
+    <div id="map"></div>
+    <h3>Mis medallas</h3>
+    <div id="medals" class="medals"></div>
+  </section>
+
+  <section id="s-game" class="screen">
+    <div class="gtop"><b id="g-title"></b><span id="g-count"></span></div>
+    <div class="bar"><i id="g-prog"></i></div>
+    <p id="g-ask" class="ask"></p>
+    <div id="act"></div>
+    <div id="fb" class="fb"></div>
+    <div class="actions">
+      <button id="b-check" class="btn big" hidden>✔ Comprobar</button>
+      <button id="b-next" class="btn big" hidden>Siguiente ➜</button>
+    </div>
+  </section>
+
+  <section id="s-result" class="screen">
+    <h2 id="r-title"></h2>
+    <div id="r-stars" class="stars"></div>
+    <p id="r-msg" class="sub"></p>
+    <p class="score">Aciertos: <b id="r-ok"></b> · Puntos ganados: <b id="r-pts"></b></p>
+    <div class="actions">
+      <button id="r-retry" class="btn">🔁 Reintentar</button>
+      <button id="r-map" class="btn">🗺️ Mapa</button>
+      <button id="r-next" class="btn big" hidden>Siguiente nivel ➜</button>
+      <button id="r-final" class="btn big" hidden>🏁 Resultado final</button>
+    </div>
+  </section>
+
+  <section id="s-final" class="screen">
+    <div class="hero">🏆</div>
+    <h2 id="f-title"></h2>
+    <p class="score">Puntos: <b id="f-pts"></b> · Estrellas: <b id="f-stars"></b></p>
+    <div id="f-levels" class="flevels"></div>
+    <h3>Medallas</h3>
+    <div id="f-medals" class="medals"></div>
+    <button id="f-map" class="btn big">🗺️ Volver al mapa</button>
+  </section>
+</main>
+<div id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
